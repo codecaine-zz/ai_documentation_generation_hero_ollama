@@ -20,7 +20,8 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Add Favicon -->
     <link rel="icon" href="favicon.png" type="image/png">
-    <meta name="description" content="AI Programming Documentation Generator - Generate programming documentation using AI.">
+    <meta name="description"
+        content="AI Programming Documentation Generator - Generate programming documentation using AI.">
     <meta name="keywords" content="AI, programming, documentation, generator, OpenAI, GPT-4">
     <meta name="author" content="codefreelance.net">
 </head>
@@ -31,10 +32,14 @@
         <a href="#ai-prompts">AI Prompts</a>
         <a href="#promptManagement">Manage Prompts</a>
         <a href="#promptSelection">Select Prompts</a>
-        <button type="button" id="generatePrompts" class="btn btn-primary ml-3" aria-label="Generate Prompts">Generate</button>
-        <button id="themeToggle" class="btn btn-secondary ml-3" aria-pressed="false" aria-label="Toggle Dark Mode">Toggle Dark Mode</button>
-        <button type="button" id="downloadAllBtn" class="btn btn-success ml-3" aria-label="Download All Documentation">Download All</button>
-        <button type="button" id="copyAllBtn" class="btn btn-info ml-3" aria-label="Copy All Documentation">Copy All</button>
+        <button type="button" id="generatePrompts" class="btn btn-primary ml-3"
+            aria-label="Generate Prompts">Generate</button>
+        <button id="themeToggle" class="btn btn-secondary ml-3" aria-pressed="false"
+            aria-label="Toggle Dark Mode">Toggle Dark Mode</button>
+        <button type="button" id="downloadAllBtn" class="btn btn-success ml-3"
+            aria-label="Download All Documentation">Download All</button>
+        <button type="button" id="copyAllBtn" class="btn btn-info ml-3" aria-label="Copy All Documentation">Copy
+            All</button>
     </nav>
 
     <div id="fullScreenLoader" role="status" aria-live="polite">
@@ -55,19 +60,26 @@
             <h2 id="inputFormTitle" class="visually-hidden">Input Form</h2>
             <div class="form-group">
                 <label for="languageInput">Programming Language</label>
-                <input type="text" id="languageInput" class="form-control" placeholder="Enter programming language" required aria-required="true">
+                <input type="text" id="languageInput" class="form-control" placeholder="Enter programming language"
+                    required aria-required="true">
             </div>
             <div class="form-group">
                 <label for="modelSelect">Select Model</label>
                 <select id="modelSelect" class="form-control" aria-required="true">
+                    <option value="qwen2.5-coder:1.5b">qwen2.5-coder:1.5b</option>
+                    <option value="qwen2.5-coder:3b">qwen2.5-coder:3b</option>
+                    <option value="qwen2.5-coder:latest">qwen2.5-coder:latest</option>
+                    <option value="granite3-moe:latest">granite3-moe:latest</option>
+                    <option value="granite3-moe:3b">granite3-moe:3b</option>
+                    <option value="granite-code:8b">granite-code:8b</option>
+                    <option value="llama3.2:1b">llama3.2:1b</option>
                     <option value="llama3.2:latest">llama3.2:latest</option>
-                    <option value="llama3.1">llama3.1:8b</option>
-                    <option value="qwen2.5-coder:14b">qwen2.5-coder:14b</option>
-                    <option value="mistral-nemo:latest">mistral-nemo:latest</option>
-                    <option value="phi3:14b">phi3:14b</option>
+                    <option value="llama3.1:latest">llama3.1:latest</option>
+
                     <option value="custom">Custom</option>
                 </select>
-                <input type="text" id="customModelInput" class="form-control mt-2" placeholder="Enter custom model" style="display: none;" aria-label="Custom Model Input">
+                <input type="text" id="customModelInput" class="form-control mt-2" placeholder="Enter custom model"
+                    style="display: none;" aria-label="Custom Model Input">
             </div>
             <div class="button-group">
                 <button type="button" class="btn btn-danger" id="clearBtn" aria-label="Clear Form">Clear Form</button>
@@ -117,7 +129,8 @@
                         </div>
                         <div class="form-group">
                             <label for="newPrompt">Prompt</label>
-                            <input type="text" id="newPrompt" class="form-control" placeholder="Enter new prompt" required>
+                            <input type="text" id="newPrompt" class="form-control" placeholder="Enter new prompt"
+                                required>
                         </div>
                         <button type="submit" class="btn btn-primary">Add Prompt</button>
                     </form>
